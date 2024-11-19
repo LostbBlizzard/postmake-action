@@ -1,4 +1,6 @@
 build:
+	npm install @actions/core
+
 	npm install tar
 
 	npm install adm-zip
