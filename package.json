@@ -1,5 +1,6 @@
-{    "name": "postmake",
-    "version": "0.0.1",
+{
+    "name": "postmake",
+    "version": "0.0.2",
     "description": "Installs postmake",
     "main": "index.js",
     "scripts": {
