@@ -43070,6 +43070,16 @@ for (var i = 0; i < programversion.programs.length; i++) {
         if (hassinglefile) {
            removedir(singlefiledir);
         }
+               if (programversion.proxy.program != "") {
+                   if (isUnix) {
+                       var content = '#!/usr/bin/env bash\n';
+                       content += programversion.proxy.program + " \"$@\""
+                       fs.writeFileSync(revolvepath(programversion.proxy.path), content);
+                   }
+                   else {
+                   }
+                   fs.chmodSync(revolvepath(programversion.proxy.path), 0o775)
+               }
         foundversion = true
         break
     }
